@@ -25,7 +25,7 @@ SECRET_KEY = ')v65r1*2_W)E#@##MfH41L5@7@N3f-*6we1f6ww6wXxxXxXoe380_&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['professor1',]
+ALLOWED_HOSTS = ['professor1', 'rbhouse', '127.0.0.1']
 
 
 # Application definition
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Fortaleza'
 
 USE_I18N = True
 

@@ -71,7 +71,7 @@
 		* 'fixed-page-footer' - Fixes footer
 		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
 	-->
-	<body class="">
+	<body class="smart-style-1">
 
 		<!-- #HEADER -->
 		<header id="header">
@@ -168,11 +168,14 @@
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
 					{% block breadcrumb %}
-						<li>Lista de Turmas</li>
+						<li>{{ turma.nome }}</li>
 					{% endblock breadcrumb %}
 				</ol>
 				<!-- end breadcrumb -->
 
+				<span class="ribbon-button-alignment pull-right" style="margin-right:25px">
+					<a id="add" class="btn btn-ribbon hidden-xs" href="#"><i class="fa fa-check"></i> Entrar em uma Turma</a>
+				</span> 
 				<span class="ribbon-button-alignment pull-right" style="margin-right:25px">
 					<a id="add" class="btn btn-ribbon hidden-xs" href="/admin/turmas/turma/add/"><i class="fa fa-plus"></i> Cadastrar Turma</a>
 				</span> 

@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from .models import *
+
 # Create your views here.
 
-@login_required()
 def index(request):
 	ultimas_turmas = Turma.objects.order_by('-data_cadastro')
 	context = {
