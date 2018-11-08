@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"ob",
+				"objects"
+			],
+			[
+				"context",
+				"context\tstatement"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
 				"mem",
 				"membro\tstatement"
 			],
@@ -171,6 +183,32 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "ProTasks/templates/turmas/detalhe.html",
+			"settings":
+			{
+				"buffer_size": 6010,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "turmas/templatetags/turmas_extras.py",
+			"settings":
+			{
+				"buffer_size": 159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ProTasks/templates/turmas/index.html",
+			"settings":
+			{
+				"buffer_size": 5309,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -258,22 +296,26 @@
 		"/C/Users/Millenium/ProTasks/atividades",
 		"/C/Users/Millenium/ProTasks/ProTasks",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas",
 		"/C/Users/Millenium/ProTasks/turmas",
-		"/C/Users/Millenium/ProTasks/turmas/__pycache__"
+		"/C/Users/Millenium/ProTasks/turmas/__pycache__",
+		"/C/Users/Millenium/ProTasks/turmas/templatetags"
 	],
 	"file_history":
 	[
+		"/C/Users/Millenium/ProTasks/turmas/templatetags/turmas_extras.py",
 		"/C/Users/Millenium/ProTasks/atividades/views.py",
+		"/C/Users/Millenium/ProTasks/turmas/views.py",
+		"/C/Users/Millenium/ProTasks/turmas/templatetags/__init__.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Millenium/ProTasks/atividades/models.py",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
 		"/C/Users/Millenium/ProTasks/turmas/urls.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/general-elements.html",
-		"/C/Users/Millenium/ProTasks/turmas/views.py",
 		"/C/Users/Millenium/ProTasks/turmas/forms.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/join.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/form-elements.html",
-		"/C/Users/Millenium/ProTasks/atividades/models.py",
 		"/C/Users/Millenium/ProTasks/turmas/models.py",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/index.html",
@@ -319,7 +361,7 @@
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -394,8 +436,95 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "ProTasks/templates/turmas/detalhe.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2966,
+								2966
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1748.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "turmas/templatetags/turmas_extras.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ProTasks/templates/turmas/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

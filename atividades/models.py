@@ -25,14 +25,6 @@ class Atividade(models.Model):
 		now = timezone.now()
 		return entrega >= now
 
-	@property
-	def e_prioridade(self):
-		x = Prioridade.objects.filter(aluno=self.aluno, atividade=self).count()
-		if x > 0:
-			return True
-		else:
-			return False
-
 class Comentario(models.Model):
 	atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)
 	aluno = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -78,7 +78,8 @@
 											{% endif %}</td>
 										<td class="text-center">{{ atividade.num_comentarios }}</td>
 										<td class="text-center">
-											{% if atividade.e_prioridade %}
+											{{ atividade.prioridade_set.}}
+											{% if atividade.prioridade.aluno == user.id %}
 												<i class="fa fa-fw fa-check text-success"></i>
 											{% else %}
 												<i class="fa fa-fw fa-times text-danger"></i>

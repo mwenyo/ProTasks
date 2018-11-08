@@ -22,6 +22,7 @@ def turma(request, codigo):
     context = {
     	'turma' : turma,
     }
+
     return render(request, 'turmas/detalhe.html', context)
 
 @login_required(login_url='/admin/login/')

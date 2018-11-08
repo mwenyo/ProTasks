@@ -15,6 +15,12 @@ def index(request):
 	context = {
 		'atividades': atividades,
 	}
+	check = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
+	print(check)
+	if check:
+		context['prioridade'] = True
+	else:
+		context['prioridade'] = False
 	return render(request, 'atividades/index.html', context)
 
 @login_required(login_url='/admin/login/')
@@ -25,4 +31,11 @@ def atividade(request, codigo):
 		'atividade' : atividade,
 		'comentarios': comentarios
 	}
+	
+	check = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
+	if check:
+		context['prioridade'] = True
+	else:
+		context['prioridade'] = False
+
 	return render(request, 'atividades/detalhe.html', context)
