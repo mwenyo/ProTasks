@@ -1,11 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-from turmas.models import Turma
 # Create your models here.
 
 class Atividade(models.Model):
-	turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+	turma = models.ForeignKey('turmas.Turma', on_delete=models.CASCADE)
 	aluno = models.ForeignKey(User, on_delete=models.CASCADE)
 	disciplina = models.CharField("Nome da disciplina", max_length=200)
 	atividade = models.CharField("Nome da atividade", max_length=200)
@@ -25,7 +24,14 @@ class Atividade(models.Model):
 		entrega = self.data_entrega
 		now = timezone.now()
 		return entrega >= now
-	
+
+	@property
+	def e_prioridade(self):
+		x = Prioridade.objects.filter(aluno=self.aluno, atividade=self).count()
+		if x > 0:
+			return True
+		else:
+			return False
 
 class Comentario(models.Model):
 	atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)

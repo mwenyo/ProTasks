@@ -10,7 +10,7 @@ from .models import *
 # Create your views here.
 
 def index(request):
-	atividades = Atividade.objects.order_by('-data_comentario')
+	atividades = Atividade.objects.order_by('data_comentario')
 	context = {
 		'atividades': atividades,
 	}
@@ -18,12 +18,7 @@ def index(request):
 
 def atividade(request, codigo):
 	atividade = get_object_or_404(Atividade, pk=codigo)
-	comentarios = Comentario.objects.filter(atividade=atividade).order_by('-data_comentario')
-
-	"""entrega = atividade.data_entrega
-	now = timezone.now()
-	Atividade.objects.annotate(expirou=entrega >= now)"""
-
+	comentarios = Comentario.objects.filter(atividade=atividade).order_by('data_comentario')
 	context = {
 		'atividade' : atividade,
 		'comentarios': comentarios

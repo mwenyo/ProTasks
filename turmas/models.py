@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from atividades.models import Atividade
 # Create your models here.
 
 class Turma(models.Model):
@@ -13,7 +13,11 @@ class Turma(models.Model):
 	data_cadastro = models.DateTimeField("Data de Cadastro", auto_now_add=True)
 
 	def __str__(self):
-		return self.nome + " - " + self.codigo
+		return self.nome + " - " + self.codigo	
+
+	@property
+	def num_atividades(self):
+		return Atividade.objects.filter(turma = self).count()
 		
 class AlunoEmTurma(models.Model):
 	aluno = models.ForeignKey(User, verbose_name="Aluno", on_delete=models.CASCADE)

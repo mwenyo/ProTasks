@@ -70,9 +70,20 @@
 										<td>
 											<a href="{% url 'atividades:atividade' atividade.id %}">{{ atividade.atividade }}</a>
 										</td>
-										<td class="text-center">{{ atividade.data_entrega }}</td>
+										<td class="text-center">
+											{% if atividade.expirou %}
+												<strong class="text-success">{{ atividade.data_entrega }}</strong>
+											{% else %}
+												<strong class="text-danger">{{ atividade.data_entrega }}</strong>
+											{% endif %}</td>
 										<td class="text-center">{{ atividade.num_comentarios }}</td>
-										<td class="text-center">{{ atividade.observacoes }}</td>
+										<td class="text-center">
+											{% if atividade.e_prioridade %}
+												<i class="fa fa-fw fa-check text-success"></i>
+											{% else %}
+												<i class="fa fa-fw fa-times text-danger"></i>
+											{% endif %}
+										</td>
 									</tr>
 									{% endfor %}
 								</tbody>

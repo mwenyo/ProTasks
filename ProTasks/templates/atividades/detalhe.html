@@ -3,9 +3,11 @@
 {% block breadcrumb %}
 	<li>
 		<h4>
-			<strong>
-				{{ atividade.turma.nome }} - {{ atividade.turma.curso }} {{ atividade.turma.ano }}, {{ atividade.turma.turno }}	/ {{ atividade.atividade }} / Coment&aacute;rios
-			</strong>
+			<a href="{% url 'turmas:turma' atividade.turma.codigo %}">
+				<strong>
+					{{ atividade.turma.nome }} - {{ atividade.turma.curso }} {{ atividade.turma.ano }}, {{ atividade.turma.turno }}	/ {{ atividade.atividade }} / Coment&aacute;rios
+				</strong>
+			</a>
 		</h4>
 	</li>
 {% endblock breadcrumb %}
@@ -59,17 +61,34 @@
 												<strong class="text-success">{{ atividade.data_entrega }}</strong>
 											{% else %}
 												<strong class="text-danger">{{ atividade.data_entrega }}</strong>
-												<small>(prazo encerrado)</small>
 											{% endif %}
 										</h3>
 									</li>
 									<li>
 										<h3>
-											valor: <strong>{{ atividade.valor }}</strong></h3>
+											Valor: <strong>{{ atividade.valor }}</strong> pontos</h3>
 									</li>
 									<li>
 										<h3>
 											Observações: <strong>{{ atividade.observacoes }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Prioridade: <span class="onoffswitch">
+											<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="start_interval" 
+											{% if atividade.e_prioridade %}
+											checked="checked"
+											{% endif %}
+											{% if not atividade.expirou %}
+											disabled="disabled" 
+											{% endif %}
+											>
+												<label class="onoffswitch-label" for="start_interval"> 
+													<span class="onoffswitch-inner" data-swchon-text="SIM" data-swchoff-text="N&Atilde;O"></span> 
+													<span class="onoffswitch-switch"></span> 
+											</label> 
+										</span>
 										</h3>
 									</li>
 								</ul>
@@ -194,7 +213,7 @@
     						null, { "width": "80%" }
     			],
 		        "oLanguage": {
-				    "sEmptyTable": "Nenhum registro encontrado",
+				    "sEmptyTable": "<strong>Ningu&eacute;m comentou ainda. Seja o primeiro!</strong>",
 				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
 				    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
 				    "sInfoFiltered": "(Filtrados de _MAX_ registros)",

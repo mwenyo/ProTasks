@@ -19,7 +19,7 @@ import turmas, atividades
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('turmas/', include('turmas.urls')),
+    #path('turmas/', include('turmas.urls')),
     path('', include('turmas.urls')),
     path('atividades/', include('atividades.urls')),
 ]

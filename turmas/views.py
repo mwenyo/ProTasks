@@ -1,13 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 from django.db.models import Count
+from django.contrib.auth.models import User
 from .models import *
 
 # Create your views here.
 
 def index(request):
-	ultimas_turmas = Turma.objects.order_by('-data_cadastro')
+	ultimas_turmas = AlunoEmTurma.objects.filter(aluno=request.user).order_by('-data_cadastro')
 	context = {
 		'ultimas_turmas': ultimas_turmas,
 	}
