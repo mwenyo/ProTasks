@@ -6,5 +6,6 @@ app_name = 'turmas'
 
 urlpatterns = [
 	path('', views.index, name='index'),
-	path('<codigo>/', views.turma, name="turma")
+	path('join/', views.join, name="join"),
+	path('<codigo>/', views.turma, name="turma"), 
 ]

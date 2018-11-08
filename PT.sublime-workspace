@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"mem",
+				"membro\tstatement"
+			],
+			[
+				"alu",
+				"AlunoEmTurma\tclass"
+			],
+			[
+				"cle",
+				"cleaned_data\tstatement"
+			],
+			[
+				"use",
+				"User\tclass"
+			],
+			[
+				"get",
+				"get_object_or_404\tfunction"
+			],
+			[
+				"m",
+				"method\tAttr"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"is",
+				"is_valid\tfunction"
+			],
+			[
+				"lo",
+				"login_required\tfunction"
+			],
+			[
 				"A",
 				"AlunoEmTurma\tclass"
 			],
@@ -148,6 +184,10 @@
 		"selected_items":
 		[
 			[
+				"anaconda",
+				"Anaconda: Disable linting on this file"
+			],
+			[
 				"git: c",
 				"Git: Commit"
 			],
@@ -218,20 +258,25 @@
 		"/C/Users/Millenium/ProTasks/atividades",
 		"/C/Users/Millenium/ProTasks/ProTasks",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas",
 		"/C/Users/Millenium/ProTasks/turmas",
 		"/C/Users/Millenium/ProTasks/turmas/__pycache__"
 	],
 	"file_history":
 	[
+		"/C/Users/Millenium/ProTasks/atividades/views.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Millenium/ProTasks/turmas/urls.py",
+		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/general-elements.html",
+		"/C/Users/Millenium/ProTasks/turmas/views.py",
+		"/C/Users/Millenium/ProTasks/turmas/forms.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/join.html",
+		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/form-elements.html",
 		"/C/Users/Millenium/ProTasks/atividades/models.py",
 		"/C/Users/Millenium/ProTasks/turmas/models.py",
-		"/C/Users/Millenium/ProTasks/atividades/views.py",
-		"/C/Users/Millenium/ProTasks/turmas/views.py",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/general-elements.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/index.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/detalhe.html",
 		"/C/Users/Millenium/ProTasks/ProTasks/settings.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/widgets.html",
@@ -239,7 +284,6 @@
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/data/dataList.json",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/projects.html",
 		"/C/Users/Millenium/ProTasks/ProTasks/statics/js/plugin/datatables/traducao.js",
-		"/C/Users/Millenium/ProTasks/turmas/urls.py",
 		"/C/Users/Millenium/ProTasks/atividades/urls.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects-edit.html",

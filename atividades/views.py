@@ -9,6 +9,7 @@ from .models import *
 
 # Create your views here.
 
+@login_required(login_url='/admin/login/')
 def index(request):
 	atividades = Atividade.objects.order_by('data_comentario')
 	context = {
@@ -16,6 +17,7 @@ def index(request):
 	}
 	return render(request, 'atividades/index.html', context)
 
+@login_required(login_url='/admin/login/')
 def atividade(request, codigo):
 	atividade = get_object_or_404(Atividade, pk=codigo)
 	comentarios = Comentario.objects.filter(atividade=atividade).order_by('data_comentario')
