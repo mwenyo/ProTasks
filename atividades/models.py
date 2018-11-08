@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils import timezone
 from turmas.models import Turma
 # Create your models here.
 
@@ -18,6 +18,14 @@ class Atividade(models.Model):
 	@property
 	def num_comentarios(self):
 		return Comentario.objects.filter(atividade = self).count()
+
+	
+	@property
+	def expirou(self):
+		entrega = self.data_entrega
+		now = timezone.now()
+		return entrega >= now
+	
 
 class Comentario(models.Model):
 	atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)
