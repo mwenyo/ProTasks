@@ -57,7 +57,7 @@
 									<li>
 										<h3>
 											Entrega: 
-											{% if atividade.expirou %}
+											{% if not atividade.expirou %}
 												<strong class="text-success">{{ atividade.data_entrega }}</strong>
 											{% else %}
 												<strong class="text-danger">{{ atividade.data_entrega }}</strong>
@@ -76,18 +76,18 @@
 									<li>
 										<h3>
 											Prioridade: <span class="onoffswitch">
-											<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="start_interval" 
+											<input type="checkbox" name="is_prioridade" class="onoffswitch-checkbox" id="is_prioridade" 
 											{% if prioridade %}
 											checked="checked"
 											{% endif %}
-											{% if not atividade.expirou %}
+											{% if atividade.expirou %}
 											disabled="disabled" 
 											{% endif %}
 											>
-												<label class="onoffswitch-label" for="start_interval"> 
+												<label class="onoffswitch-label" for="is_prioridade"> 
 													<span class="onoffswitch-inner" data-swchon-text="SIM" data-swchoff-text="N&Atilde;O"></span> 
 													<span class="onoffswitch-switch"></span> 
-											</label> 
+												</label> 
 										</span>
 										</h3>
 									</li>
@@ -108,12 +108,14 @@
 					<header>
 						<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
 						<h2><strong>Coment&aacute;rios</strong></h2>
-						<div class="widget-toolbar">
-							<a href="/admin/atividades/comentario/add/" class="btn btn-primary">
-								<i class="fa fa-comment"></i>
-								Comentar
-							</a>
-						</div>
+						{% if not atividade.expirou %}
+							<div class="widget-toolbar">
+								<a href="{% url 'atividades:comentar' atividade.id %}" class="btn btn-primary">
+									<i class="fa fa-comment"></i>
+									Comentar
+								</a>
+							</div>
+						{% endif %}
 					</header>
 					<!-- widget div-->
 					<div>
@@ -126,7 +128,7 @@
 						<!-- end widget edit box -->
 	
 						<!-- widget content -->
-						<div class="widget-body ">
+						<div class="widget-body no-padding">
 	
 							<table id="dt_basic" class="table table-striped table-bordered table-hover" width="100%">
 								<thead>			                
@@ -198,6 +200,12 @@
 		$(document).ready(function() {
 			
 			pageSetUp();
+
+			/* definir prioridade */
+
+			$('#is_prioridade').click(function (e){
+				window.location.replace("{% url 'atividades:prioridade' atividade.id %}");
+			});
 			
 			var responsiveHelper_dt_basic = undefined;
 

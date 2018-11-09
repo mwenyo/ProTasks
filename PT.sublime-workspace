@@ -4,64 +4,40 @@
 		"selected_items":
 		[
 			[
-				"ob",
-				"objects"
+				"ati",
+				"atividades"
 			],
 			[
-				"context",
-				"context\tstatement"
+				"o",
+				"oAtividade\tstatement"
 			],
 			[
-				"req",
+				"Comen",
+				"Comentario\tclass"
+			],
+			[
+				"ativi",
+				"atividades"
+			],
+			[
+				"comen",
+				"Comentar"
+			],
+			[
+				"no",
+				"no-padding"
+			],
+			[
+				"conte",
+				"continue\tkeyword"
+			],
+			[
+				"requ",
 				"request"
-			],
-			[
-				"mem",
-				"membro\tstatement"
-			],
-			[
-				"alu",
-				"AlunoEmTurma\tclass"
-			],
-			[
-				"cle",
-				"cleaned_data\tstatement"
-			],
-			[
-				"use",
-				"User\tclass"
-			],
-			[
-				"get",
-				"get_object_or_404\tfunction"
-			],
-			[
-				"m",
-				"method\tAttr"
-			],
-			[
-				"ac",
-				"action\tAttr"
-			],
-			[
-				"is",
-				"is_valid\tfunction"
 			],
 			[
 				"lo",
 				"login_required\tfunction"
-			],
-			[
-				"A",
-				"AlunoEmTurma\tclass"
-			],
-			[
-				"fa-w",
-				"fa-fw"
-			],
-			[
-				"a",
-				"atividade\tstatement"
 			],
 			[
 				"wid",
@@ -184,27 +160,28 @@
 	"buffers":
 	[
 		{
-			"file": "ProTasks/templates/turmas/detalhe.html",
+			"file": "atividades/views.py",
 			"settings":
 			{
-				"buffer_size": 6010,
+				"buffer_size": 2650,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "turmas/templatetags/turmas_extras.py",
+			"file": "atividades/forms.py",
 			"settings":
 			{
-				"buffer_size": 159,
+				"buffer_size": 191,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ProTasks/templates/turmas/index.html",
+			"file": "ProTasks/templates/atividades/comentar.html",
 			"settings":
 			{
-				"buffer_size": 5309,
+				"buffer_size": 3113,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -222,20 +199,12 @@
 		"selected_items":
 		[
 			[
-				"anaconda",
-				"Anaconda: Disable linting on this file"
-			],
-			[
-				"git: c",
+				"git: co",
 				"Git: Commit"
 			],
 			[
 				"git",
-				"Git: Version"
-			],
-			[
-				"git: co",
-				"Git: Commit"
+				"Git: Status"
 			],
 			[
 				"git: sta",
@@ -292,43 +261,44 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Millenium/ProTasks",
-		"/C/Users/Millenium/ProTasks/atividades",
-		"/C/Users/Millenium/ProTasks/ProTasks",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas",
-		"/C/Users/Millenium/ProTasks/turmas",
-		"/C/Users/Millenium/ProTasks/turmas/__pycache__",
-		"/C/Users/Millenium/ProTasks/turmas/templatetags"
+		"/C/Users/Marcia/ProTasks",
+		"/C/Users/Marcia/ProTasks/atividades",
+		"/C/Users/Marcia/ProTasks/ProTasks",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas"
 	],
 	"file_history":
 	[
-		"/C/Users/Millenium/ProTasks/turmas/templatetags/turmas_extras.py",
-		"/C/Users/Millenium/ProTasks/atividades/views.py",
-		"/C/Users/Millenium/ProTasks/turmas/views.py",
-		"/C/Users/Millenium/ProTasks/turmas/templatetags/__init__.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
-		"/C/Users/Millenium/ProTasks/atividades/models.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
-		"/C/Users/Millenium/ProTasks/turmas/urls.py",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/general-elements.html",
-		"/C/Users/Millenium/ProTasks/turmas/forms.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/join.html",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/form-elements.html",
-		"/C/Users/Millenium/ProTasks/turmas/models.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/index.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/detalhe.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/settings.py",
+		"/C/Users/Marcia/ProTasks/atividades/models.py",
+		"/C/Users/Marcia/ProTasks/atividades/urls.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
+		"/C/Users/Marcia/ProTasks/turmas/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/comentar.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/index.html",
+		"/C/Users/Marcia/ProTasks/turmas/templatetags/turmas_extras.py",
+		"/C/Users/Marcia/ProTasks/atividades/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/settings.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/widgets.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/urls.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/data/dataList.json",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/projects.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/settings.py",
 		"/C/Users/Millenium/ProTasks/ProTasks/statics/js/plugin/datatables/traducao.js",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/detalhe.html",
+		"/C/Users/Millenium/ProTasks/turmas/urls.py",
+		"/C/Users/Millenium/ProTasks/atividades/views.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/urls.py",
 		"/C/Users/Millenium/ProTasks/atividades/urls.py",
+		"/C/Users/Millenium/ProTasks/turmas/views.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Millenium/ProTasks/atividades/models.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects-edit.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
+		"/C/Users/Millenium/ProTasks/turmas/models.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/datatables.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/forum.html",
 		"/C/Users/Millenium/ProTasks/atividades/admin.py",
@@ -361,7 +331,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -375,10 +345,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"switch",
-			"turm",
-			"turma",
-			"Wenyo",
+			"datet",
+			"timezone",
 			"turma",
 			"comentarios",
 			"user",
@@ -436,87 +404,80 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ProTasks/templates/turmas/detalhe.html",
+					"file": "atividades/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6010,
+						"buffer_size": 2650,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2966,
-								2966
+								2087,
+								2087
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1748.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "turmas/templatetags/turmas_extras.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1296.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "ProTasks/templates/turmas/index.html",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "atividades/forms.py",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5309,
+						"buffer_size": 191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								181,
+								181
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -524,13 +485,43 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ProTasks/templates/atividades/comentar.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1903,
+								1903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 936.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -567,7 +558,7 @@
 	"project": "PT.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

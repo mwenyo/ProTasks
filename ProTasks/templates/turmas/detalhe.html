@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load turmas_extras %}
 {% block breadcrumb %}
 	<li>
 		<h4>
@@ -64,22 +65,21 @@
 									</tr>
 								</thead>
 								<tbody>
-									{% for atividade in turma.atividade_set.all %}
+									{% for atividade in lista_atividades %}
 									<tr>
 										<td>{{ atividade.disciplina }}</td>
 										<td>
 											<a href="{% url 'atividades:atividade' atividade.id %}">{{ atividade.atividade }}</a>
 										</td>
 										<td class="text-center">
-											{% if atividade.expirou %}
+											{% if not atividade.expirou %}
 												<strong class="text-success">{{ atividade.data_entrega }}</strong>
 											{% else %}
 												<strong class="text-danger">{{ atividade.data_entrega }}</strong>
 											{% endif %}</td>
 										<td class="text-center">{{ atividade.num_comentarios }}</td>
 										<td class="text-center">
-											{{ atividade.prioridade_set.}}
-											{% if atividade.prioridade.aluno == user.id %}
+											{% if atividade|is_priority:user.id %}
 												<i class="fa fa-fw fa-check text-success"></i>
 											{% else %}
 												<i class="fa fa-fw fa-times text-danger"></i>
@@ -132,6 +132,7 @@
 					"t"+
 					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 				"autoWidth" : true,
+				"ordering": false,
 		        "oLanguage": {
 				    "sEmptyTable": "Nenhum registro encontrado",
 				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",

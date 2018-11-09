@@ -12,7 +12,8 @@ class Atividade(models.Model):
 	data_modificacao = models.DateTimeField("Data de Modificação", auto_now=True)
 	data_entrega = models.DateTimeField("Data de Entrega")
 	valor = models.DecimalField(max_digits=4, decimal_places=2)
-	observacoes = models.TextField("Observações")
+	observacoes = models.TextField("Observações", null=True, blank=True)
+	encerrada = models.BooleanField(default=False)
 
 	@property
 	def num_comentarios(self):
@@ -23,7 +24,7 @@ class Atividade(models.Model):
 	def expirou(self):
 		entrega = self.data_entrega
 		now = timezone.now()
-		return entrega >= now
+		return entrega < now
 
 class Comentario(models.Model):
 	atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)
