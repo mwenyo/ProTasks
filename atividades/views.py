@@ -12,9 +12,8 @@ def index(request):
 	context = {
 		'atividades': atividades,
 	}
-	check = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
-	print(check)
-	if check:
+	k = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
+	if k:
 		context['prioridade'] = True
 	else:
 		context['prioridade'] = False

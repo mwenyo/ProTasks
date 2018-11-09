@@ -163,6 +163,13 @@
 													{% endautoescape %}
 												</p>
 											</blockquote>
+											{% if comentario.aluno == user %}
+											<footer>
+												<a href="#" class="btn btn-danger">
+													Excluir
+												</a>
+											</footer>
+											{% endif %}
 										</td>
 										<!--td class="text-center">{{ comentario.data_comentario }}</td-->
 									</tr>

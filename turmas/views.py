@@ -21,7 +21,6 @@ def turma(request, codigo):
     turma = get_object_or_404(Turma, codigo=codigo)
     atividades = Atividade.objects.filter(turma=turma).\
     	order_by('encerrada','prioridade__atividade','data_entrega',)
-    print(atividades)
     context = {
     	'turma' : turma,
     	'lista_atividades': atividades,
