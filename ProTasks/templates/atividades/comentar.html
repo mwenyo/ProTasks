@@ -35,7 +35,7 @@
     
                         <!-- widget content -->
                         <div class="widget-body no-padding">
-                            <form action="{% url 'atividades:cometar' atividade.id %}" method="post" class="smart-form">
+                            <form action="{% url 'atividades:comentar' atividade.id %}" method="post" class="smart-form">
                                 {% csrf_token %}
                                 <header>
                                     Escrever um coment&aacute;rio
@@ -64,5 +64,26 @@
             </article>
         </div>
     </section>
-
+    <div id="kkk"></div>
 {% endblock content %}
+{% block javascript %}
+    <script src="{% static 'js/plugin/summernote/summernote.min.js' %}"></script>
+    <script type="text/javascript">
+        // DO NOT REMOVE : GLOBAL FUNCTIONS!
+        
+        $(document).ready(function() {
+            
+            pageSetUp();
+
+            $('.summernote').summernote({
+                height: 150,
+                focus: true,
+            });
+            
+            $('form').submit(function(e) {
+                var markupStr = $('.summernote').summernote('code');
+                $('#id_comentario').html(markupStr);
+            });
+        });
+    </script>
+{% endblock javascript %}

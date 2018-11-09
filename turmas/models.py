@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from atividades.models import Atividade
+
+from random import choice
 # Create your models here.
 
 class Turma(models.Model):
@@ -18,7 +20,18 @@ class Turma(models.Model):
 	@property
 	def num_atividades(self):
 		return Atividade.objects.filter(turma = self).count()
-		
+
+	def save(self, *args, **kwargs):
+		if not self.codigo:
+			caracteres = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			senha = ""
+			for i in range(5):
+				senha += choice(caracteres)
+			self.codigo = senha
+			super(Turma, self).save(*args, **kwargs)
+		else:
+			super(Turma, self).save(*args, **kwargs)
+
 class AlunoEmTurma(models.Model):
 	aluno = models.ForeignKey(User, verbose_name="Aluno", on_delete=models.CASCADE)
 	turma = models.ForeignKey(Turma, on_delete=models.CASCADE)

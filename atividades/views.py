@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .forms  import Comentar
+from .forms  import ComentarioForm
 from .models import *
 
 # Create your views here.
@@ -61,8 +61,10 @@ def comentar(request, atividade):
 		form = ComentarioForm(request.POST)
 		if form.is_valid():
 			try:
-				oAtividade = Atividade.objects.get(atividade=atividade)
-				comentario = Comentario(aluno=request.user, atividade=oAtividade)
+				oAtividade = get_object_or_404(Atividade, pk=atividade)
+				comentario = Comentario(aluno=request.user, atividade=oAtividade, comentario=form.cleaned_data['comentario'])
+				comentario.save()
+				return HttpResponseRedirect('/atividades/' + str(atividade) + '/')
 			except:
 				return render(request, 'atividades/comentar.html', {'form' : form, 'erro':'Atividade inválida.'})
 		else:
@@ -70,7 +72,7 @@ def comentar(request, atividade):
 	else:
 		try:
 			form = ComentarioForm()
-			oAtividade = Atividade.objects.get(atividade=atividade)
+			oAtividade = get_object_or_404(Atividade, pk=atividade)
 			return render(request, 'atividades/comentar.html', {'form' : form, 'atividade': oAtividade})
 		except:
 			return render(request, 'atividades/comentar.html', {'form' : form, 'erro':'Atividade inválida.'})
