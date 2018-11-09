@@ -8,7 +8,7 @@ from random import choice
 class Turma(models.Model):
 	aluno = models.ForeignKey(User, verbose_name="Administrador", on_delete=models.CASCADE)
 	nome = models.CharField(max_length=200)
-	codigo = models.CharField("Código", max_length=200, blank=True, null=True)
+	codigo = models.CharField("Código", max_length=200, blank=True, null=True, unique=True)
 	curso = models.CharField(max_length=200)
 	ano = models.PositiveIntegerField("Ano/Módulo")
 	turno = models.CharField(max_length=200)

@@ -20,7 +20,7 @@
                 <!-- Widget ID (each widget will need unique ID)-->
                 <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false"                    data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
                     <header>
-                        <span class="widget-icon"> <i class="fa fa-group"></i> </span>
+                        <span class="widget-icon"> <i class="fa fa-comment"></i> </span>
                         <h2><strong>Comentar</strong></h2>
                     </header>
                     <!-- widget div-->
@@ -43,7 +43,6 @@
                                 <fieldset>
                                     <section>
                                         {{ form.comentario.errors }}
-                                        <label class="label">Coment&aacute;rio</label>
                                         <label class="input" for="{{ form.comentario.id_for_label }}">
                                             {{ form.comentario }}
                                         </label>
@@ -68,6 +67,7 @@
 {% endblock content %}
 {% block javascript %}
     <script src="{% static 'js/plugin/summernote/summernote.min.js' %}"></script>
+    <script src="{% static 'js/plugin/summernote/lang/summernote-pt-BR.js' %}"></script>
     <script type="text/javascript">
         // DO NOT REMOVE : GLOBAL FUNCTIONS!
         
@@ -76,8 +76,10 @@
             pageSetUp();
 
             $('.summernote').summernote({
-                height: 150,
                 focus: true,
+                dialogsInBody: true,
+                lang: 'pt-BR',
+                maximumImageFileSize: 1048576, // tamanho máximo da imagem
             });
             
             $('form').submit(function(e) {

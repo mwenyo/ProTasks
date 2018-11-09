@@ -4,64 +4,80 @@
 		"selected_items":
 		[
 			[
-				"ob",
-				"objects"
+				"col",
+				"col-lg-12"
 			],
 			[
-				"context",
-				"context\tstatement"
+				"tur",
+				"turma_add\tfunction"
 			],
 			[
-				"req",
-				"request"
+				"aluno",
+				"alunoEmTurma\tstatement"
 			],
 			[
-				"mem",
-				"membro\tstatement"
-			],
-			[
-				"alu",
-				"AlunoEmTurma\tclass"
-			],
-			[
-				"cle",
+				"cl",
 				"cleaned_data\tstatement"
-			],
-			[
-				"use",
-				"User\tclass"
-			],
-			[
-				"get",
-				"get_object_or_404\tfunction"
-			],
-			[
-				"m",
-				"method\tAttr"
-			],
-			[
-				"ac",
-				"action\tAttr"
 			],
 			[
 				"is",
 				"is_valid\tfunction"
 			],
 			[
+				"Turm",
+				"TurmaForm\tclass"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"pos",
+				"postForm"
+			],
+			[
+				"comenta",
+				"comentario"
+			],
+			[
+				"Comen",
+				"ComentarioForm"
+			],
+			[
+				"ati",
+				"atividades"
+			],
+			[
+				"o",
+				"oAtividade\tstatement"
+			],
+			[
+				"ativi",
+				"atividades"
+			],
+			[
+				"comen",
+				"Comentar"
+			],
+			[
+				"no",
+				"no-padding"
+			],
+			[
+				"conte",
+				"continue\tkeyword"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
 				"lo",
 				"login_required\tfunction"
-			],
-			[
-				"A",
-				"AlunoEmTurma\tclass"
-			],
-			[
-				"fa-w",
-				"fa-fw"
-			],
-			[
-				"a",
-				"atividade\tstatement"
 			],
 			[
 				"wid",
@@ -86,10 +102,6 @@
 			[
 				"ge",
 				"get_object_or_404\tfunction"
-			],
-			[
-				"tur",
-				"turma_id\tparam"
 			],
 			[
 				"INC",
@@ -184,28 +196,10 @@
 	"buffers":
 	[
 		{
-			"file": "ProTasks/templates/atividades/comentar.html",
+			"file": "ProTasks/templates/turmas/form.html",
 			"settings":
 			{
-				"buffer_size": 3817,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ProTasks/templates/atividades/detalhe.html",
-			"settings":
-			{
-				"buffer_size": 8889,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "atividades/views.py",
-			"settings":
-			{
-				"buffer_size": 2771,
+				"buffer_size": 5247,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -214,16 +208,26 @@
 			"file": "turmas/views.py",
 			"settings":
 			{
-				"buffer_size": 1791,
+				"buffer_size": 2494,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "turmas/templatetags/turmas_extras.py",
+			"file": "ProTasks/templates/turmas/detalhe.html",
 			"settings":
 			{
-				"buffer_size": 292,
+				"buffer_size": 5995,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ProTasks/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 8653,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -240,20 +244,20 @@
 		"selected_items":
 		[
 			[
-				"anaconda",
+				"anaconda d",
 				"Anaconda: Disable linting on this file"
 			],
 			[
-				"git: c",
-				"Git: Commit"
-			],
-			[
-				"git",
-				"Git: Version"
+				"ac",
+				"Package Control: Install Package"
 			],
 			[
 				"git: co",
 				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Status"
 			],
 			[
 				"git: sta",
@@ -316,36 +320,46 @@
 		"/C/Users/Millenium/ProTasks/ProTasks/templates",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades",
 		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas",
-		"/C/Users/Millenium/ProTasks/turmas",
-		"/C/Users/Millenium/ProTasks/turmas/__pycache__"
+		"/C/Users/Millenium/ProTasks/turmas"
 	],
 	"file_history":
 	[
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/detalhe.html",
-		"/C/Users/Millenium/ProTasks/turmas/templatetags/turmas_extras.py",
-		"/C/Users/Millenium/ProTasks/atividades/views.py",
-		"/C/Users/Millenium/ProTasks/turmas/views.py",
-		"/C/Users/Millenium/ProTasks/turmas/templatetags/__init__.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
-		"/C/Users/Millenium/ProTasks/atividades/models.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
 		"/C/Users/Millenium/ProTasks/turmas/urls.py",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/general-elements.html",
 		"/C/Users/Millenium/ProTasks/turmas/forms.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/join.html",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/form-elements.html",
 		"/C/Users/Millenium/ProTasks/turmas/models.py",
-		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
-		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/index.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/settings.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/comentar.html",
+		"/C/Users/Millenium/ProTasks/turmas/views.py",
+		"/C/Users/Millenium/ProTasks/atividades/views.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/detalhe.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"//Professor1/Downloads2/WB0573SK0/DEVELOPER/BS3/HTML/full/other-editors.html",
+		"/C/Users/Millenium/ProTasks/atividades/forms.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/statics/js/plugin/summernote/ummernote-pt-BR.js",
+		"//professor1/Downloads2/WB0573SK0/DEVELOPER/BS3/HTML/full/other-editors.html",
+		"/C/Users/Millenium/ProTasks/atividades/urls.py",
+		"/C/Users/Millenium/Desktop/Protasks/senha.py",
+		"/C/Users/Marcia/ProTasks/atividades/models.py",
+		"/C/Users/Marcia/ProTasks/atividades/urls.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
+		"/C/Users/Marcia/ProTasks/turmas/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/comentar.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/index.html",
+		"/C/Users/Marcia/ProTasks/turmas/templatetags/turmas_extras.py",
+		"/C/Users/Marcia/ProTasks/atividades/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/settings.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/widgets.html",
-		"/C/Users/Millenium/ProTasks/ProTasks/urls.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/data/dataList.json",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/projects.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/settings.py",
 		"/C/Users/Millenium/ProTasks/ProTasks/statics/js/plugin/datatables/traducao.js",
-		"/C/Users/Millenium/ProTasks/atividades/urls.py",
+		"/C/Users/Millenium/ProTasks/ProTasks/urls.py",
+		"/C/Users/Millenium/ProTasks/atividades/models.py",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/AJAX/full/ajax/projects-edit.html",
+		"/C/Users/Millenium/ProTasks/ProTasks/templates/turmas/index.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/datatables.html",
 		"/C/Users/Millenium/Downloads/WB0573SK0/DEVELOPER/BS3/HTML/full/forum.html",
 		"/C/Users/Millenium/ProTasks/atividades/admin.py",
@@ -378,7 +392,7 @@
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -392,11 +406,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"print",
-			"switch",
-			"turm",
-			"turma",
-			"Wenyo",
+			"jqu",
+			"Summer",
+			"summer",
+			"codigo",
+			"datet",
+			"timezone",
 			"turma",
 			"comentarios",
 			"user",
@@ -454,24 +469,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ProTasks/templates/atividades/comentar.html",
+					"file": "ProTasks/templates/turmas/form.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3817,
+						"buffer_size": 5247,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2409,
-								2409
+								1126,
+								1126
 							]
 						],
 						"settings":
@@ -481,27 +496,56 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 345.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "ProTasks/templates/atividades/detalhe.html",
+					"file": "turmas/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8889,
+						"buffer_size": 2494,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5732,
-								5732
+								2288,
+								2288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1104.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ProTasks/templates/turmas/detalhe.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
 							]
 						],
 						"settings":
@@ -510,106 +554,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4002.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "atividades/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1023,
-								1026
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 278.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "turmas/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1791,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								855,
-								855
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
+						"translation.y": 690.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "turmas/templatetags/turmas_extras.py",
+					"buffer": 3,
+					"file": "ProTasks/templates/base.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 292,
+						"buffer_size": 8653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								292,
-								292
+								7105,
+								7105
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4542.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -617,7 +594,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -654,7 +631,7 @@
 	"project": "PT.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -692,7 +669,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_width": 263.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

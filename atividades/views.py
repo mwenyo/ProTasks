@@ -22,7 +22,8 @@ def index(request):
 @login_required(login_url='/admin/login/')
 def atividade(request, codigo):
 	atividade = get_object_or_404(Atividade, pk=codigo)
-	comentarios = Comentario.objects.filter(atividade=atividade).order_by('data_comentario')
+	comentarios = Comentario.objects.filter(atividade=atividade).\
+		order_by('data_comentario')
 	if atividade.expirou and atividade.encerrada == False:
 		atividade.encerrada = True
 		atividade.save()
@@ -56,22 +57,26 @@ def prioridade(request, codigo):
 
 @login_required(login_url='/admin/login/')
 def comentar(request, atividade):
+	oAtividade = get_object_or_404(Atividade, pk=atividade)
 	if request.method == 'POST':
 		form = ComentarioForm(request.POST)
 		if form.is_valid():
 			try:
-				oAtividade = get_object_or_404(Atividade, pk=atividade)
-				comentario = Comentario(aluno=request.user, atividade=oAtividade, comentario=form.cleaned_data['comentario'])
+				comentario = Comentario(aluno=request.user, atividade=oAtividade, \
+					comentario=form.cleaned_data['comentario'])
 				comentario.save()
 				return HttpResponseRedirect('/atividades/' + str(atividade) + '/')
 			except:
-				return render(request, 'atividades/comentar.html', {'form' : form, 'erro':'Atividade inválida.'})
+				return render(request, 'atividades/comentar.html', {'form' : form, \
+					'erro':'Atividade inválida.'})
 		else:
-			return render(request, 'atividades/comentar.html', {'form' : form, 'erro':'Seu formulário ccontém erros.'})
+			return render(request, 'atividades/comentar.html', {'form' : form, \
+				'erro':'Seu formulário ccontém erros.'})
 	else:
 		try:
 			form = ComentarioForm()
-			oAtividade = get_object_or_404(Atividade, pk=atividade)
-			return render(request, 'atividades/comentar.html', {'form' : form, 'atividade': oAtividade})
+			return render(request, 'atividades/comentar.html', {'form' : form, \
+				'atividade': oAtividade})
 		except:
-			return render(request, 'atividades/comentar.html', {'form' : form, 'erro':'Atividade inválida.'})
+			return render(request, 'atividades/comentar.html', {'form' : form, \
+				'erro':'Atividade inválida.'})

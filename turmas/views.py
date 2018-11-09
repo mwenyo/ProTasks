@@ -20,7 +20,7 @@ def index(request):
 def turma(request, codigo):
     turma = get_object_or_404(Turma, codigo=codigo)
     atividades = Atividade.objects.filter(turma=turma).\
-    	order_by('encerrada','prioridade__atividade','data_entrega',)
+    	order_by('encerrada','prioridade__atividade','data_entrega',).distinct()
     context = {
     	'turma' : turma,
     	'lista_atividades': atividades,
@@ -49,3 +49,25 @@ def join(request):
 	else:
 		form = JoinTurma()
 		return render(request, 'turmas/join.html', {'form' : form})
+
+@login_required(login_url='/admin/login/')
+def turma_add(request):
+	if request.method == 'POST':
+		form = TurmaForm(request.POST)
+		if form.is_valid():
+			nova_turma = Turma(
+				aluno = request.user,
+				nome = form.cleaned_data['nome'],
+				curso = form.cleaned_data['curso'],
+				ano = form.cleaned_data['ano'],
+				turno = form.cleaned_data['turno'],
+				)
+			nova_turma.save()
+			alunoEmTurma = AlunoEmTurma(turma=nova_turma, aluno=request.user)
+			alunoEmTurma.save()
+			return HttpResponseRedirect('/' + nova_turma.codigo)
+		else:
+			return render(request, 'turmas/form.html', {'form' : form})
+	else:
+		form = TurmaForm()
+		return render(request, 'turmas/form.html', {'form' : form})
