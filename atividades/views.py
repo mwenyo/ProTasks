@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .forms  import ComentarioForm
+from turmas.models import *
+from .forms  import *
 from .models import *
 
 # Create your views here.
@@ -80,3 +81,31 @@ def comentar(request, atividade):
 		except:
 			return render(request, 'atividades/comentar.html', {'form' : form, \
 				'erro':'Atividade inválida.'})
+
+@login_required(login_url='/admin/login/')
+def cadastrar(request, codigo):
+	if request.method == 'POST':
+		form = AtividadeForm(request.POST)
+		if form.is_valid():
+			aet = AlunoEmTurma.objects.filter(turma__codigo=codigo, aluno=request.user).exist()
+			if aet:	
+				turma = get_object_or_404(Turma, codigo=codigo)
+				nova_atividade = Atividade(
+					aluno = request.user,
+					turma = turma,
+					atividade = form.cleaned_data['atividade'],
+					disciplina = form.cleaned_data['disciplina'],
+					valor = form.cleaned_data['valor'],
+					data_entrega = form.cleaned_data['data_entrega'],
+					observacoes = form.cleaned_data['observacoes'],
+					)
+				nova_atividade.save()
+				return HttpResponseRedirect('/' + nova_atividade.codigo)
+			else:
+				return HttpResponseRedirect('')
+		else:
+			return render(request, 'atividades/form.html', {'form' : form})
+	else:
+		form = AtividadeForm()
+		turma = get_object_or_404(Turma, codigo=codigo)
+		return render(request, 'atividades/form.html', {'form' : form, 'turma': turma})
