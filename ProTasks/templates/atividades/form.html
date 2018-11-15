@@ -38,7 +38,11 @@
     
                         <!-- widget content -->
                         <div class="widget-body no-padding">
+                            {% if not edit %}
                             <form action="{% url 'atividades:cadastrar' turma.codigo %}" method="post" class="smart-form">
+                            {% else %}
+                            <form action="{% url 'atividades:editar' atividade.id %}" method="post" class="smart-form">
+                            {% endif %}
                                 {% csrf_token %}
                                 <header>
                                     Cadastrar Atividade
@@ -109,6 +113,7 @@
     <script src="{% static 'js/plugin/summernote/summernote.min.js' %}"></script>
     <script src="{% static 'js/plugin/summernote/lang/summernote-pt-BR.js' %}"></script>
     <script src="{% static 'js/plugin/clockpicker/clockpicker.min.js' %}"></script>
+    <script src="{% static 'js/plugin/datepicker/i18n/datepicker-pt-BR.js' %}"></script>
     <script type="text/javascript">
         // DO NOT REMOVE : GLOBAL FUNCTIONS!
         
@@ -117,6 +122,10 @@
             pageSetUp();
 
             $('.clockpicker').clockpicker();
+            $( "#id_data_entrega_0" ).datepicker({ 
+                minDate: 0, 
+                reginal: "pt-BR",
+            });
 
             $('#id_atividade').focus();
 

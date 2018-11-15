@@ -1,4 +1,5 @@
 from django import forms
+from .models import *
 #from datetimepicker.widgets import DateTimePicker
 
 class ComentarioForm(forms.Form):
@@ -6,28 +7,25 @@ class ComentarioForm(forms.Form):
     	widget=forms.Textarea(attrs={'class': 'summernote'})
     	)
 
-class AtividadeForm(forms.Form):
-	disciplina = forms.CharField(
-    	max_length=200,
-    	widget=forms.TextInput(attrs={'placeholder':'Nome da Disciplina'})
-    	)
-	atividade = forms.CharField(
-    	max_length=200,
-    	widget=forms.TextInput(attrs={'placeholder':'Título da Avtividade'})
-    	)
-	valor = forms.DecimalField(
-    	min_value=0,
-    	max_digits=2,
-    	max_value=10.00,
-    	widget=forms.NumberInput(attrs={'placeholder':'Valor em Pontos'})
-    	)
-	data_entrega = forms.SplitDateTimeField(
-        input_date_formats = '%d/%m/%Y',
-        input_time_formats = '%H:%M',
+class AtividadeForm(forms.ModelForm):
+    valor = forms.DecimalField(
+        min_value=0,
+        max_digits=4,
+        max_value=10.00,
+        widget=forms.NumberInput(attrs={'placeholder':'Valor em Pontos'})
+        )
+    data_entrega = forms.SplitDateTimeField(
+        input_date_formats = ['%d/%m/%Y'],
+        input_time_formats = ['%H:%M:%S'],
         widget = forms.SplitDateTimeWidget(
-            date_attrs = {'class': 'datepicker', 'placeholder':'Data de Entrega'},
+            date_attrs = {'class': '', 'placeholder':'Data de Entrega'},
             time_attrs = {'class': 'clockpicker', 'placeholder':'Horário da Entrega'}),
         )
-	observacoes = forms.CharField(
-    	widget=forms.Textarea(attrs={'class': 'summernote'})
-    	)
+    class Meta:
+        model = Atividade
+        fields = ('disciplina','atividade','valor','data_entrega','observacoes')
+        widgets={
+            'disciplina': forms.TextInput(attrs={'placeholder':'Nome da Disciplina'}),
+            'atividade': forms.TextInput(attrs={'placeholder':'Título da Avtividade'}),
+            'observacoes': forms.Textarea(attrs={'class': 'summernote'})
+        }
