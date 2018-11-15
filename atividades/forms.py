@@ -27,5 +27,5 @@ class AtividadeForm(forms.ModelForm):
         widgets={
             'disciplina': forms.TextInput(attrs={'placeholder':'Nome da Disciplina'}),
             'atividade': forms.TextInput(attrs={'placeholder':'Título da Avtividade'}),
-            'observacoes': forms.Textarea(attrs={'class': 'summernote'})
+            'observacoes': forms.Textarea(attrs={'class': 'summernote', 'required': 'false'})
         }

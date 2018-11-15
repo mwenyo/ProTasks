@@ -97,7 +97,10 @@
 							</div>
 							{% if atividade.aluno == user %}
 							<div class="widget-footer">
-								<a href="#" class="btn btn-danger pull-left">Excluir</a>
+								<form action="{% url 'atividades:excluir' atividade.id %}" method="post" id="excluir_atividade">
+									{% csrf_token %}
+									<button type="submit" class="btn btn-danger pull-left">Excluir</button>
+								</form>
 								<a href="{% url 'atividades:editar' atividade.id %}" class="btn btn-primary">Editar</a>
 							{% endif %}
 							</div>
@@ -208,7 +211,9 @@
 
 	<!-- JARVIS WIDGETS -->
 	<script src="{% static 'js/smartwidgets/jarvis.widget.min.js' %}"></script>
+	
 	<!-- PAGE RELATED PLUGIN(S) -->
+	<script src="{% static 'js/notification/SmartNotification.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/jquery.dataTables.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/dataTables.colVis.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/dataTables.tableTools.min.js' %}"></script>
@@ -227,6 +232,26 @@
 
 			$('#is_prioridade').click(function (e){
 				window.location.replace("{% url 'atividades:prioridade' atividade.id %}");
+			});
+
+			$("#excluir_atividade").submit(function(e) {
+				e.preventDefault();
+
+				$.SmartMessageBox({
+					title : "ProTasks",
+					content : "Tem certeza que quer excluir esta atividade?",
+					buttons : '[Sim][Não]',
+					//sound:,
+				}, function(ButtonPressed) {
+					if (ButtonPressed === "Sim") {
+						$("#excluir_atividade").unbind('submit').submit();
+					}
+					if (ButtonPressed === "No") {
+						return false;
+					}
+		
+				});
+				e.preventDefault();
 			});
 			
 			var responsiveHelper_dt_basic = undefined;

@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"atii",
+				"atividade"
+			],
+			[
+				"me",
+				"method\tAttr"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ex",
+				"excluir_atividade"
+			],
+			[
+				"ati",
+				"atividade"
+			],
+			[
+				"da",
+				"data_entrega_1"
+			],
+			[
+				"A",
+				"Atividade"
+			],
+			[
+				"Model",
+				"ModelForm\tModelForm"
+			],
+			[
+				"ativi",
+				"atividade"
+			],
+			[
+				"wid",
+				"widget-footer"
+			],
+			[
+				"wi",
+				"widget-icon"
+			],
+			[
+				"PO",
+				"POST"
+			],
+			[
+				"min",
+				"minDate"
+			],
+			[
+				"ativida",
+				"atividades"
+			],
+			[
 				"Time",
 				"TimeInput\ttype"
 			],
@@ -16,16 +80,8 @@
 				"SplitDateTimeWidget\tclass"
 			],
 			[
-				"wid",
-				"widgets"
-			],
-			[
 				"con",
 				"context\tparam"
-			],
-			[
-				"get",
-				"get_object_or_404\tfunction"
 			],
 			[
 				"ob",
@@ -44,20 +100,12 @@
 				"max_value\tparam"
 			],
 			[
-				"ati",
-				"atividades"
-			],
-			[
 				"o",
 				"oAtividade\tstatement"
 			],
 			[
 				"Comen",
 				"Comentario\tclass"
-			],
-			[
-				"ativi",
-				"atividades"
 			],
 			[
 				"comen",
@@ -192,46 +240,19 @@
 	"buffers":
 	[
 		{
-			"file": "ProTasks/templates/atividades/form.html",
-			"settings":
-			{
-				"buffer_size": 6817,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "atividades/forms.py",
-			"settings":
-			{
-				"buffer_size": 1115,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "atividades/views.py",
 			"settings":
 			{
-				"buffer_size": 3782,
+				"buffer_size": 5777,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "atividades/urls.py",
+			"file": "ProTasks/templates/atividades/form.html",
 			"settings":
 			{
-				"buffer_size": 396,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ProTasks/templates/turmas/detalhe.html",
-			"settings":
-			{
-				"buffer_size": 6204,
+				"buffer_size": 7754,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -240,7 +261,7 @@
 			"file": "ProTasks/templates/atividades/detalhe.html",
 			"settings":
 			{
-				"buffer_size": 8896,
+				"buffer_size": 10193,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -338,6 +359,16 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Marcia/ProTasks/atividades/urls.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/D/SmartAdmin/DEVELOPER/BS3/HTML/full/general-elements.html",
+		"/D/SmartAdmin/DEVELOPER/BS3/Source_UNMINIFIED_JS/notification/SmartNotification.txt",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
+		"/C/Users/Marcia/ProTasks/atividades/forms.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/form.html",
+		"/C/Users/Marcia/ProTasks/atividades/models.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/statics/js/plugin/datepicker/datepicker-pt-BR.js",
+		"/C/Users/Marcia/ProTasks/ProTasks/statics/js/libs/datepicker-pt-BR.js",
 		"/C/Users/Marcia/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/forms/templates/django/forms/widgets/multiwidget.html",
 		"/C/Users/Marcia/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/forms/templates/django/forms/widgets/splitdatetime.html",
 		"/C/Users/Marcia/ProTasks/ProTasks/settings.py",
@@ -345,14 +376,9 @@
 		"/C/Users/Marcia/AppData/Roaming/Sublime Text 3/Packages/KiteSublime/Default.sublime-keymap",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/base.html",
 		"/C/Users/Marcia/ProTasks/turmas/forms.py",
-		"/C/Users/Marcia/ProTasks/atividades/forms.py",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/form.html",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/comentar.html",
 		"/C/Users/Marcia/ProTasks/atividades/views.py",
-		"/C/Users/Marcia/ProTasks/atividades/models.py",
-		"/C/Users/Marcia/ProTasks/atividades/urls.py",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
 		"/C/Users/Marcia/ProTasks/turmas/views.py",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/index.html",
 		"/C/Users/Marcia/ProTasks/turmas/templatetags/turmas_extras.py",
@@ -406,7 +432,7 @@
 	],
 	"find":
 	{
-		"height": 45.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -420,6 +446,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"editar",
+			"sound",
+			"sound_path",
+			"SmartMessageBox",
+			"smart-mod-eg1",
+			"saafe",
 			"ready",
 			"turma",
 			"Turma",
@@ -483,54 +515,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ProTasks/templates/atividades/form.html",
+					"file": "atividades/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6817,
+						"buffer_size": 5777,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1901,
-								1901
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 767.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "atividades/forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1004,
-								1004
+								4886,
+								4886
 							]
 						],
 						"settings":
@@ -544,154 +546,71 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
 								}
 							],
 							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 173.0,
+						"translation.y": 2857.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "atividades/views.py",
+					"buffer": 1,
+					"file": "ProTasks/templates/atividades/form.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3782,
+						"buffer_size": 7754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3650,
-								3650
+								7087,
+								7087
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1713.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "atividades/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								19,
-								19
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3100.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "ProTasks/templates/turmas/detalhe.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1021,
-								1021
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 492.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "ProTasks/templates/atividades/detalhe.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8896,
+						"buffer_size": 10193,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3843,
-								4043
+								7925,
+								7925
 							]
 						],
 						"settings":
@@ -700,10 +619,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2909.0,
+						"translation.y": 5702.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -711,7 +630,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -748,7 +667,7 @@
 	"project": "PT.sublime-project",
 	"replace":
 	{
-		"height": 82.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -786,7 +705,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_width": 224.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

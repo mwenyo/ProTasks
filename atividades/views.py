@@ -9,7 +9,7 @@ from .models import *
 # Create your views here.
 
 @login_required(login_url='/admin/login/')
-def index(request):
+def atividade_index(request):
 	atividades = Atividade.objects.order_by('data_comentario')
 	context = {
 		'atividades': atividades,
@@ -22,7 +22,7 @@ def index(request):
 	return render(request, 'atividades/index.html', context)
 
 @login_required(login_url='/admin/login/')
-def atividade(request, codigo):
+def atividade_atividade(request, codigo):
 	atividade = get_object_or_404(Atividade, pk=codigo)
 	comentarios = Comentario.objects.filter(atividade=atividade).\
 		order_by('data_comentario')
@@ -43,7 +43,7 @@ def atividade(request, codigo):
 	return render(request, 'atividades/detalhe.html', context)
 
 @login_required(login_url='/admin/login/')
-def prioridade(request, codigo):
+def atividade_prioridade(request, codigo):
 	try:
 		atividade = get_object_or_404(Atividade, pk=codigo)
 		check = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
@@ -58,7 +58,7 @@ def prioridade(request, codigo):
 		return HttpResponseRedirect('/atividades/' + str(atividade.id) + '/')
 
 @login_required(login_url='/admin/login/')
-def comentar(request, atividade):
+def comentario_adicionar(request, atividade):
 	oAtividade = get_object_or_404(Atividade, pk=atividade)
 	if request.method == 'POST':
 		form = ComentarioForm(request.POST)
@@ -86,6 +86,17 @@ def comentar(request, atividade):
 @login_required(login_url='/admin/login/')
 def cadastrar(request, codigo):
 	if request.method == 'POST':
+		
+		if len(request.POST.get('data_entrega_1')) == 5:
+			#outra gambiarra
+			request.POST = request.POST.copy()
+			x = request.POST.get('data_entrega_1')
+			request.POST['data_entrega_1'] += ":00"
+		else:
+			request.POST = request.POST.copy()
+			x = request.POST.get('data_entrega_1')
+			request.POST['data_entrega_1'] = x[:-3] + ":00"
+		
 		form = AtividadeForm(request.POST)
 		turma = get_object_or_404(Turma, codigo=codigo)
 		if form.is_valid():
@@ -104,24 +115,34 @@ def cadastrar(request, codigo):
 			else:
 				return HttpResponseRedirect('')
 		else:
-			return render(request, 'atividades/form.html', {'form' : form, 'turma': turma})
+			return render(request, 'atividades/form.html', {'form' : form, 'turma': turma, 'erro': 'Preencha os dados corretamente.'})
 	else:
 		form = AtividadeForm()
 		turma = get_object_or_404(Turma, codigo=codigo)
-		return render(request, 'atividades/form.html', {'form' : form, 'turma': turma})
+		context = {
+			'form': form,
+			'turma': turma,
+			'edit': False,
+		}
+		return render(request, 'atividades/form.html', context)
 
 @login_required(login_url='/admin/login/')
-def editar(request, codigo):
+def atividade_editar(request, codigo):
 	atividade = get_object_or_404(Atividade, id=codigo)
 	if atividade.aluno == request.user:
 		turma = get_object_or_404(Turma, codigo=atividade.turma.codigo)
 		if request.method == 'POST':
 
 			#Gambiarra pra truncar os segundos kkkkkk
-			request.POST = request.POST.copy()
-			x = request.POST.get('data_entrega_1')
-			request.POST['data_entrega_1'] = x[:-3] + ":00"
-			print(request.POST.get('data_entrega_1'))
+			if len(request.POST.get('data_entrega_1')) == 5:
+				#outra gambiarra
+				request.POST = request.POST.copy()
+				x = request.POST.get('data_entrega_1')
+				request.POST['data_entrega_1'] += ":00"
+			else:
+				request.POST = request.POST.copy()
+				x = request.POST.get('data_entrega_1')
+				request.POST['data_entrega_1'] = x[:-3] + ":00"
 			
 			form = AtividadeForm(request.POST, instance=atividade)
 			if form.is_valid():
@@ -132,9 +153,22 @@ def editar(request, codigo):
 				else:
 					return HttpResponseRedirect('/' + atividade.turma.codigo)
 			else:
-				return render(request, 'atividades/form.html', {'form' : form, 'turma': turma, 'atividade': atividade, 'edit': True})
+				return render(request, 'atividades/form.html', {'form' : form, 'turma': turma, 'atividade': atividade, 'edit': True, 'erro': 'Preencha os dados corretamente.'})
 		else:
 			form = AtividadeForm(instance=atividade)
 			return render(request, 'atividades/form.html', {'form' : form, 'turma': turma, 'atividade': atividade, 'edit': True})
+	else:
+		return HttpResponseRedirect('/atividades/' + str(atividade.id))
+
+@login_required(login_url='/admin/login/')
+def atividade_excluir(request, codigo):
+	atividade = get_object_or_404(Atividade, id=codigo)
+	turma = atividade.turma
+	if atividade.aluno == request.user:
+		if request.method == 'POST':
+			atividade.delete()
+			return HttpResponseRedirect('/' + turma.codigo)
+		else:
+			return HttpResponseRedirect('/atividades/' + str(atividade.id))
 	else:
 		return HttpResponseRedirect('/atividades/' + str(atividade.id))

@@ -97,9 +97,15 @@
                                     <button type="submit" class="btn btn-primary">
                                         Enviar
                                     </button>
-                                    <a href="{% url 'atividades:index' %}" class="btn btn-default">
+                                    {% if edit %}
+                                    <a href="{% url 'atividades:atividade' atividade.id %}" class="btn btn-default">
                                         Voltar
                                     </a>
+                                    {% else %}
+                                    <a href="{% url 'turmas:turma' turma.codigo %}" class="btn btn-default">
+                                        Voltar
+                                    </a>
+                                    {% endif %}
                                 </footer>
                             </form>
                         </div>
@@ -121,7 +127,11 @@
             
             pageSetUp();
 
-            $('.clockpicker').clockpicker();
+            $('.clockpicker').clockpicker({
+                placement: 'top',
+                align: 'left',
+                autoclose: true,
+            });
             $( "#id_data_entrega_0" ).datepicker({ 
                 minDate: 0, 
                 reginal: "pt-BR",
