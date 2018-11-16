@@ -51,7 +51,7 @@
 									</li>
 									<li>
 										<h3>
-											Adicionada: <strong>{{ atividade.data_cadastro }}</strong>
+											Adicionada: <strong>{{ atividade.data_cadastro }}</strong> <small>por <strong>{{ atividade.aluno.first_name }}</strong></small>
 										</h3>
 									</li>
 									<li>
@@ -102,8 +102,8 @@
 									<button type="submit" class="btn btn-danger pull-left">Excluir</button>
 								</form>
 								<a href="{% url 'atividades:editar' atividade.id %}" class="btn btn-primary">Editar</a>
-							{% endif %}
 							</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -174,12 +174,15 @@
 													{% endautoescape %}
 												</p>
 											</blockquote>
-											{% if comentario.aluno == user %}
-											<footer>
-												<a href="#" class="btn btn-danger btn-xs">
-													Excluir
-												</a>
-											</footer>
+											{% if comentario.status %}
+												{% if comentario.aluno == user or comentario.atividade.turma.aluno == user %}
+												<footer>
+													<form action="{% url 'atividades:comentario_excluir' comentario.id %}" method="post" id="excluir_comentario">
+														{% csrf_token %}
+														<button type="submit" class="btn btn-danger btn-xs pull-left">Excluir</button>
+													</form>
+												</footer>
+												{% endif %}
 											{% endif %}
 										</td>
 										<!--td class="text-center">{{ comentario.data_comentario }}</td-->
@@ -203,7 +206,6 @@
 				</div>
 			</article>
 		</div>
-
 	</section>
 {% endblock content %}
 
@@ -245,6 +247,26 @@
 				}, function(ButtonPressed) {
 					if (ButtonPressed === "Sim") {
 						$("#excluir_atividade").unbind('submit').submit();
+					}
+					if (ButtonPressed === "No") {
+						return false;
+					}
+		
+				});
+				e.preventDefault();
+			});
+
+			$("#excluir_comentario").submit(function(e) {
+				e.preventDefault();
+
+				$.SmartMessageBox({
+					title : "ProTasks",
+					content : "Tem certeza que quer excluir este comentário?",
+					buttons : '[Sim][Não]',
+					//sound:,
+				}, function(ButtonPressed) {
+					if (ButtonPressed === "Sim") {
+						$("#excluir_comentario").unbind('submit').submit();
 					}
 					if (ButtonPressed === "No") {
 						return false;

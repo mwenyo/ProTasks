@@ -1,26 +1,90 @@
 {% extends "base.html" %}
 {% load static %}
 {% load turmas_extras %}
-{% block breadcrumb %}
-	<li>
-		<h4>
-			<strong>
-				{{ turma.nome }} - {{ turma.curso }} {{ turma.ano }}, {{ turma.turno }} / Atividades
-			</strong>
-		</h4>
-	</li>
-{% endblock breadcrumb %}
 {% block content %}
 	<!-- widget grid -->
 	<section id="widget-grid" class="">
-
+		
 		<!-- row -->
 		<div class="row">
 		
-			<!-- NEW WIDGET START -->
 			<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<!-- Widget ID (each widget will need unique ID)-->
-				<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false"					data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
+				
+				<!-- NEW WIDGET START -->
+				<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
+					<header>
+						<span class="widget-icon"> <i class="fa fa-group"></i> </span>
+						<h2>Detalhes da Turma</h2>
+					</header>
+					<!-- widget div-->
+					<div>
+	
+						<!-- widget edit box -->
+						<div class="jarviswidget-editbox">
+							<!-- This area used as dropdown edit box -->
+	
+						</div>
+						<!-- end widget edit box -->
+	
+						<!-- widget content -->
+						<div class="widget-body no-padding">
+							<div class="price-features">
+								<ul class="list-unstyled text-left">
+									<li>
+										<h3>
+											Turma: <strong>{{ turma.nome }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Administrador: <strong>{{ turma.aluno.first_name }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											C&oacute;digo: <strong>{{ turma.codigo }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Curso: <strong>{{ turma.curso }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Ano/M&oacute;dulo: <strong>{{ turma.ano }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Turno: <strong>{{ turma.turno }}</strong>
+										</h3>
+									</li>
+									<li>
+										<h3>
+											Data de Cria&ccedil;&atilde;o: <strong>{{ turma.data_cadastro }}</strong>
+										</h3>
+									</li>
+								</ul>
+							</div>
+							{% if turma.aluno == user %}
+								<div class="widget-footer">
+									<form action="{% url 'turmas:turma_excluir' turma.codigo %}" method="post" id="excluir_turma">
+										{% csrf_token %}
+										<button type="submit" class="btn btn-danger pull-left">Excluir</button>
+									</form>
+									<a href="{% url 'turmas:turma_editar' turma.codigo %}" class="btn btn-primary">Editar</a>
+								</div>
+							{% endif %}
+						</div>
+						<!-- end widget content -->
+	
+					</div>
+					<!-- end widget div -->
+				</div>
+		
+				<!-- NEW WIDGET START -->
+				<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
 					<header>
 						<span class="widget-icon"> <i class="fa fa-group"></i> </span>
 						<h2>Lista de Atividades</h2>
@@ -101,6 +165,141 @@
 					</div>
 					<!-- end widget div -->
 				</div>
+		
+				<!-- NEW WIDGET START -->
+				<div class="jarviswidget jarviswidget-color-darken" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
+					<header>
+						<span class="widget-icon"> <i class="fa fa-group"></i> </span>
+						<h2>Participantes da Turma</h2>
+					</header>
+					<!-- widget div-->
+					<div>
+	
+						<!-- widget edit box -->
+						<div class="jarviswidget-editbox">
+							<!-- This area used as dropdown edit box -->
+	
+						</div>
+						<!-- end widget edit box -->
+	
+						<!-- widget content -->
+						<div class="widget-body no-padding">
+	
+							<table id="dt_basic2" class="table table-striped table-bordered table-hover" width="100%">
+								<thead>			                
+									<tr>
+										<th data-class="expand" class="text-center">
+											<i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Nome
+										</th>
+										
+										<th data-class="expand" class="text-center">
+											<i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Data de Ingresso
+										</th>
+										
+										<th data-class="expand" class="text-center">
+											<i class="fa fa-fw fa-warning text-muted hidden-md hidden-sm hidden-xs"></i> Ações
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><h4><strong>{{ turma.aluno.first_name }}</strong> <small>administrador</small></h4></td>
+										<td class="text-center">{{ turma.data_cadastro }}</td>
+										<td></td>
+									</tr>
+									{% for aem in alunos %}
+									<tr>
+										<td><h4>{{ aem.aluno.first_name }}</h4></td>
+										<td class="text-center">{{ aem.data_cadastro }}</td>
+										{% if aem.turma.aluno.id == user.id %}
+											<td class="text-center">
+												<form action="{% url 'turmas:remover_aluno' aem.id %}" method="post" id="remover_aluno">
+													{% csrf_token %}
+													<button type="submit" class="btn btn-danger btn-xs">Remover</button>
+												</form>
+											</td>
+										{% endif %}
+										{% if aem.aluno.id == user.id  %}
+											<td class="text-center">
+												<form action="{% url 'turmas:remover_aluno' aem.id %}" method="post" id="remover_aluno">
+													{% csrf_token %}
+													<button type="submit" class="btn btn-danger btn-xs">Sair</button>
+												</form>
+											</td>
+										{% endif %}
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+
+						</div>
+						<!-- end widget content -->
+	
+					</div>
+					<!-- end widget div -->
+				</div>
+
+				{% if turma.aluno.id == user.id %}
+				<!-- NEW WIDGET START -->
+					<div class="jarviswidget jarviswidget-color-darken" id="wid-id-3" data-widget-editbutton="false" data-widget-colorbutton="false"data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-sortable="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false">
+						<header>
+							<span class="widget-icon"> <i class="fa fa-group"></i> </span>
+							<h2>Solicita&ccedil;&otilde;es</h2>
+						</header>
+						<!-- widget div-->
+						<div>
+		
+							<!-- widget edit box -->
+							<div class="jarviswidget-editbox">
+								<!-- This area used as dropdown edit box -->
+		
+							</div>
+							<!-- end widget edit box -->
+		
+							<!-- widget content -->
+							<div class="widget-body no-padding">
+		
+								<table id="dt_basic3" class="table table-striped table-bordered table-hover" width="100%">
+									<thead>			                
+										<tr>
+											<th data-class="expand" class="text-center">
+												<i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Nome
+											</th>
+											
+											<th data-class="expand" class="text-center">
+												<i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Data de Solicita&ccedil;&atilde;o
+											</th>
+											
+											<th data-class="expand" class="text-center">
+												<i class="fa fa-fw fa-warning text-muted hidden-md hidden-sm hidden-xs"></i> Ações
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for aem in solicitacoes %}
+										<tr>
+											<td><h4>{{ aem.aluno.first_name }}</h4></td>
+											<td class="text-center">{{ aem.data_cadastro }}</td>
+											<td class="text-center">
+												<a href="{% url 'turmas:remover_solicitacao' aem.id %}" id="remover_solicitacao" class="btn btn-danger btn-xs" rel="{{ aem.id }}">
+													Remover
+												</a>
+												<a href="{% url 'turmas:aceitar_solicitacao' aem.id %}" id="aceitar_solicitacao" class="btn btn-success btn-xs">
+													Aceitar
+												</a>
+											</td>
+										</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+
+							</div>
+							<!-- end widget content -->
+		
+						</div>
+						<!-- end widget div -->
+					</div>
+				{% endif %}
 			</article>
 		</div>
 	</section>
@@ -110,7 +309,9 @@
 
 	<!-- JARVIS WIDGETS -->
 	<script src="{% static 'js/smartwidgets/jarvis.widget.min.js' %}"></script>
+
 	<!-- PAGE RELATED PLUGIN(S) -->
+	<script src="{% static 'js/notification/SmartNotification.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/jquery.dataTables.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/dataTables.colVis.min.js' %}"></script>
 	<script src="{% static 'js/plugin/datatables/dataTables.tableTools.min.js' %}"></script>
@@ -124,6 +325,46 @@
 		$(document).ready(function() {
 			
 			pageSetUp();
+
+			$("#excluir_turma").submit(function(e) {
+				e.preventDefault();
+
+				$.SmartMessageBox({
+					title : "ProTasks",
+					content : "Tem certeza que quer excluir esta turma?",
+					buttons : '[Sim][Não]',
+					//sound:,
+				}, function(ButtonPressed) {
+					if (ButtonPressed === "Sim") {
+						$("#excluir_turma").unbind('submit').submit();
+					}
+					if (ButtonPressed === "Não") {
+						return false;
+					}
+		
+				});
+				e.preventDefault();
+			});
+
+			$("#remover_solicitacao").click(function(e) {
+				e.preventDefault();
+
+				$.SmartMessageBox({
+					title : "ProTasks",
+					content : "Tem certeza que quer excluir esta solicita&ccedil;&atilde;o?",
+					buttons : '[Sim][Não]',
+					//sound:,
+				}, function(ButtonPressed) {
+					if (ButtonPressed === "Sim") {
+						window.location.replace("/"+$("#remover_solicitacao").attr("rel")+"/remover/solicitacao");
+					}
+					if (ButtonPressed === "Não") {
+						return false;
+					}
+		
+				});
+				e.preventDefault();
+			});
 			
 			var responsiveHelper_dt_basic = undefined;
 
@@ -173,6 +414,80 @@
 				"drawCallback" : function(oSettings) {
 					responsiveHelper_dt_basic.respond();
 				}
+			});
+
+			$('#dt_basic2').dataTable({
+				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"+
+					"t"+
+					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+				"autoWidth" : true,
+				"ordering": true,
+		        "oLanguage": {
+				    "sEmptyTable": "Nenhum registro encontrado",
+				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+				    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+				    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+				    "sInfoPostFix": "",
+				    "sInfoThousands": ".",
+				    "sLengthMenu": "_MENU_ resultados por página",
+				    "sLoadingRecords": "Carregando...",
+				    "sProcessing": "Processando...",
+				    "sZeroRecords": "Nenhum registro encontrado",
+				    "sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>',
+				    "oPaginate": {
+				        "sNext": "Próximo",
+				        "sPrevious": "Anterior",
+				        "sFirst": "Primeiro",
+				        "sLast": "Último"
+				    },
+				    "oAria": {
+				        "sSortAscending": ": Ordenar colunas de forma ascendente",
+				        "sSortDescending": ": Ordenar colunas de forma descendente"
+				    }
+				},
+				"preDrawCallback" : function() {
+					// Initialize the responsive datatables helper once.
+					if (!responsiveHelper_dt_basic) {
+						responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+					}
+				},
+			});
+
+			$('#dt_basic3').dataTable({
+				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>"+
+					"t"+
+					"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+				"autoWidth" : true,
+				"ordering": true,
+		        "oLanguage": {
+				    "sEmptyTable": "Nenhuma Solicita&ccedil;&atilde;o encontrada",
+				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+				    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+				    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+				    "sInfoPostFix": "",
+				    "sInfoThousands": ".",
+				    "sLengthMenu": "_MENU_ resultados por página",
+				    "sLoadingRecords": "Carregando...",
+				    "sProcessing": "Processando...",
+				    "sZeroRecords": "Nenhuma Solicita&ccedil;&atilde;o encontrada",
+				    "sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>',
+				    "oPaginate": {
+				        "sNext": "Próximo",
+				        "sPrevious": "Anterior",
+				        "sFirst": "Primeiro",
+				        "sLast": "Último"
+				    },
+				    "oAria": {
+				        "sSortAscending": ": Ordenar colunas de forma ascendente",
+				        "sSortDescending": ": Ordenar colunas de forma descendente"
+				    }
+				},
+				"preDrawCallback" : function() {
+					// Initialize the responsive datatables helper once.
+					if (!responsiveHelper_dt_basic) {
+						responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#dt_basic'), breakpointDefinition);
+					}
+				},
 			});
 		});
 	</script>

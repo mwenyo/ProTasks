@@ -6,3 +6,4 @@ from .models import *
 
 admin.site.register(Turma)
 admin.site.register(AlunoEmTurma)
+admin.site.register(Solicitacao)

@@ -30,6 +30,7 @@ class Comentario(models.Model):
 	atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)
 	aluno = models.ForeignKey(User, on_delete=models.CASCADE)
 	comentario = models.TextField("Comentário")
+	status = models.BooleanField("status", default=True)
 	data_comentario = models.DateTimeField("Data de Publicação", auto_now_add=True)
 	data_modificacao = models.DateTimeField("Data de Modificação", auto_now=True)
 

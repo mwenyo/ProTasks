@@ -35,7 +35,7 @@
 	
 						<!-- widget content -->
 						<div class="widget-body no-padding">
-							<form action="{% url 'turmas:join' %}" method="post" class="smart-form">
+							<form action="{% url 'turmas:solicitar' %}" method="post" class="smart-form">
 								{% csrf_token %}
 								{{ form.non_field_errors }}
 								<header>

@@ -35,7 +35,11 @@
     
                         <!-- widget content -->
                         <div class="widget-body no-padding">
+                            {% if not edit %}
                             <form action="{% url 'turmas:cadastrar' %}" method="post" class="smart-form">
+                            {% else %}
+                            <form action="{% url 'turmas:turma_editar' turma.codigo %}" method="post" class="smart-form">
+                            {% endif %}
                                 {% csrf_token %}
                                 <header>
                                     Cadastrar Turma

@@ -40,3 +40,13 @@ class AlunoEmTurma(models.Model):
 	class Meta:
 		verbose_name_plural = "Alunos em Turmas"
 		unique_together = (("aluno", "turma"),)
+
+class Solicitacao(models.Model):
+	aluno = models.ForeignKey(User, verbose_name="Aluno", on_delete=models.CASCADE)
+	turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+	data_cadastro = models.DateTimeField("Data de Solicitação", auto_now_add=True)
+
+	class Meta:
+		verbose_name_plural = "Solicitação"
+		verbose_name_plural = "Solicitações"
+		unique_together = (("aluno", "turma"),)
