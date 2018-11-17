@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import turmas, atividades
+from contas.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('turmas/', include('turmas.urls')),
     path('', include('turmas.urls')),
     path('atividades/', include('atividades.urls')),
+
+    path('contas/login/', login_view, name="login"),
+    path('contas/registrar/', register_view, name="registrar"),
+    path('contas/sair/', logout_view, name="sair"),
+    path('contas/<int:codigo>/alterar', change_view, name="alterar_cadastro"),
+    path('contas/<int:codigo>/alterar_senha', change_password_view, name="alterar_senha"),
 ]

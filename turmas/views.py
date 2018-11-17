@@ -8,7 +8,7 @@ from .forms import *
 
 # Create your views here.
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_index(request):
 	ultimas_turmas = AlunoEmTurma.objects.filter(aluno=request.user).order_by('-data_cadastro')
 	solicitacoes = Solicitacao.objects.filter(aluno=request.user)
@@ -18,7 +18,7 @@ def turma_index(request):
 	}
 	return render(request, 'turmas/index.html', context)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_detalhes(request, codigo):
 	aem = AlunoEmTurma.objects.filter(aluno__id=request.user.id, turma__codigo=codigo).exists()
 	if aem:
@@ -38,7 +38,7 @@ def turma_detalhes(request, codigo):
 	else:
 		return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_solicitar(request):
 	if request.method == 'POST':
 		form = JoinTurma(request.POST)
@@ -60,7 +60,7 @@ def turma_solicitar(request):
 		form = JoinTurma()
 		return render(request, 'turmas/join.html', {'form' : form})
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_cadastrar(request):
 	if request.method == 'POST':
 		form = TurmaForm(request.POST)
@@ -82,7 +82,7 @@ def turma_cadastrar(request):
 		form = TurmaForm()
 		return render(request, 'turmas/form.html', {'form' : form, 'edit' : False})
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_excluir(request, codigo):
 	turma = get_object_or_404(Turma, codigo=codigo)
 	if turma.aluno.id == request.user.id:
@@ -94,7 +94,7 @@ def turma_excluir(request, codigo):
 	else:
 		return HttpResponseRedirect('/' + turma.codigo)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def turma_editar(request, codigo):
 	turma = get_object_or_404(Turma, codigo=codigo)
 	if turma.aluno.id == request.user.id:
@@ -113,7 +113,7 @@ def turma_editar(request, codigo):
 	else:
 		return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def remover_aluno(request, aem):
 	vinculo = get_object_or_404(AlunoEmTurma, id=aem)
 	if vinculo.turma.aluno.id == request.user.id or vinculo.aluno.id == request.user.id:
@@ -125,7 +125,7 @@ def remover_aluno(request, aem):
 	else:
 		return HttpResponseRedirect('/' + vinculo.turma.codigo)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def remover_solicitacao(request, codigo):
 	solicitacao = get_object_or_404(Solicitacao, id=codigo)
 	turma = solicitacao.turma
@@ -135,7 +135,7 @@ def remover_solicitacao(request, codigo):
 	else:
 		return HttpResponseRedirect('/' + turma.codigo)
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def aceitar_solicitacao(request, codigo):
 	solicitacao = get_object_or_404(Solicitacao, id=codigo)
 	turma = solicitacao.turma

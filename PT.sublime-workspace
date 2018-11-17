@@ -313,15 +313,6 @@
 			}
 		},
 		{
-			"file": "ProTasks/templates/atividades/detalhe.html",
-			"settings":
-			{
-				"buffer_size": 11015,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "ProTasks/templates/turmas/index.html",
 			"settings":
 			{
@@ -361,6 +352,10 @@
 		"selected_items":
 		[
 			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
 				"kite",
 				"Kite: Status"
 			],
@@ -397,10 +392,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"pack",
-				"Package Control: Enable Package"
-			],
-			[
 				"PACA",
 				"Package Control: Disable Package"
 			],
@@ -434,9 +425,6 @@
 		"/C/Users/Marcia/ProTasks",
 		"/C/Users/Marcia/ProTasks/atividades",
 		"/C/Users/Marcia/ProTasks/ProTasks",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas",
 		"/C/Users/Marcia/ProTasks/turmas"
 	],
 	"file_history":
@@ -605,7 +593,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -621,8 +609,8 @@
 						"selection":
 						[
 							[
-								1488,
-								1488
+								890,
+								890
 							]
 						],
 						"settings":
@@ -642,43 +630,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ProTasks/templates/atividades/detalhe.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 11015,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1893.0,
+						"translation.y": 276.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "ProTasks/templates/turmas/index.html",
 					"semi_transient": false,
 					"settings":
@@ -690,8 +649,8 @@
 						"selection":
 						[
 							[
-								5430,
-								5430
+								1772,
+								1772
 							]
 						],
 						"settings":
@@ -700,14 +659,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4013.0,
+						"translation.y": 839.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "turmas/urls.py",
 					"semi_transient": false,
 					"settings":
@@ -742,11 +701,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "ProTasks/templates/turmas/detalhe.html",
 					"semi_transient": false,
 					"settings":

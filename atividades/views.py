@@ -6,26 +6,7 @@ from turmas.models import *
 from .forms  import *
 from .models import *
 
-# Create your views here.
-"""
-@login_required(login_url='/admin/login/')
-def atividade_index(request):
-	aem = AlunoEmTurma.objects.filter(aluno__id=request.user.id, turma__codigo=codigo).exists()
-	if aem:
-		atividades = Atividade.objects.order_by('data_comentario')
-		context = {
-			'atividades': atividades,
-		}
-		k = Prioridade.objects.filter(aluno=request.user, atividade=atividade)
-		if k:
-			context['prioridade'] = True
-		else:
-			context['prioridade'] = False
-		return render(request, 'atividades/index.html', context)
-	else:
-		return HttpResponseRedirect('')"""
-
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def atividade_detalhes(request, codigo):
 	atividade = get_object_or_404(Atividade, pk=codigo)
 	aem = AlunoEmTurma.objects.filter(
@@ -51,7 +32,7 @@ def atividade_detalhes(request, codigo):
 	else:
 		return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def atividade_prioridade(request, codigo):
 	try:
 		atividade = get_object_or_404(Atividade, pk=codigo)
@@ -69,7 +50,7 @@ def atividade_prioridade(request, codigo):
 	except:
 		return HttpResponseRedirect('/atividades/' + str(atividade.id) + '/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def atividade_cadastrar(request, codigo):
     if AlunoEmTurma.objects.filter(turma__codigo=codigo, aluno=request.user.id).exists():
         if request.method == 'POST':
@@ -112,7 +93,7 @@ def atividade_cadastrar(request, codigo):
     else:
         return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def atividade_editar(request, codigo):
     atividade = get_object_or_404(Atividade, id=codigo)
     if AlunoEmTurma.objects.filter(turma__codigo=atividade.turma.codigo, aluno=request.user.id).exists():
@@ -146,7 +127,7 @@ def atividade_editar(request, codigo):
     else:
         return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def atividade_excluir(request, codigo):
 	atividade = get_object_or_404(Atividade, id=codigo)
 	if AlunoEmTurma.objects.filter(turma__codigo=atividade.turma.codigo, aluno=request.user.id).exists():
@@ -162,7 +143,7 @@ def atividade_excluir(request, codigo):
 	else:
 		return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def comentario_adicionar(request, atividade):
 	oAtividade = get_object_or_404(Atividade, pk=atividade)
 	if AlunoEmTurma.objects.filter(turma__codigo=oAtividade.turma.codigo, aluno=request.user.id).exists():
@@ -191,7 +172,7 @@ def comentario_adicionar(request, atividade):
 	else:
 		return HttpResponseRedirect('/')
 
-@login_required(login_url='/admin/login/')
+@login_required(login_url='contas/login/')
 def comentario_excluir(request, codigo):
 	comentario = get_object_or_404(Comentario, id=codigo)
 	if AlunoEmTurma.objects.filter(turma__codigo=comentario.atividade.turma.codigo, aluno=request.user.id).exists():

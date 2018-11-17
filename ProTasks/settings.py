@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'turmas',
     'atividades',
-    #'datetimepicker',
+    'contas',
 ]
 
 MIDDLEWARE = [
