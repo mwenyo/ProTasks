@@ -27,10 +27,22 @@ class UserLoginForm(forms.Form):
 			return super(UserLoginForm, self).clean(*args, **kwargs)
 
 
-class UserRegisterForm(forms.Form):
+class UserRegisterForm(forms.ModelForm):
+	username = forms.CharField()
+	first_name = forms.CharField()
 	email = forms.EmailField(label='Email address')
 	password = forms.CharField(widget=forms.PasswordInput)
 	confirm_password = forms.CharField(widget=forms.PasswordInput)
+
+	class Meta:
+		model = User
+		fields = {
+			'username',
+			'first_name',
+			'email',
+			'password',
+			'confirm_password',
+		}
 
 	def clean(self, *args, **kwargs):
 		email = self.cleaned_data.get('email')

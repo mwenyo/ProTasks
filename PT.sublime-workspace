@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"confirm_password"
+			],
+			[
+				"email",
+				"email"
+			],
+			[
+				"fis",
+				"first_name"
+			],
+			[
+				"old",
+				"old_user\tstatement"
+			],
+			[
+				"UserChangeForm",
+				"UserChangePassWordForm\tclass"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"cl",
+				"cleaned_data\tstatement"
+			],
+			[
+				"gt",
+				"get_object_or_404\tfunction"
+			],
+			[
+				"User",
+				"UserChangeForm\tclass"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"va",
+				"ValidationError"
+			],
+			[
 				"u",
 				"user"
 			],
@@ -142,10 +186,6 @@
 			[
 				"SplitD",
 				"SplitDateTimeWidget\tclass"
-			],
-			[
-				"con",
-				"context\tparam"
 			],
 			[
 				"ob",
@@ -304,38 +344,10 @@
 	"buffers":
 	[
 		{
-			"file": "turmas/views.py",
+			"file": "atividades/models.py",
 			"settings":
 			{
-				"buffer_size": 5348,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ProTasks/templates/turmas/index.html",
-			"settings":
-			{
-				"buffer_size": 9923,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "turmas/urls.py",
-			"settings":
-			{
-				"buffer_size": 720,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ProTasks/templates/turmas/detalhe.html",
-			"settings":
-			{
-				"buffer_size": 17366,
-				"encoding": "UTF-8",
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -424,34 +436,44 @@
 	[
 		"/C/Users/Marcia/ProTasks",
 		"/C/Users/Marcia/ProTasks/atividades",
-		"/C/Users/Marcia/ProTasks/ProTasks",
-		"/C/Users/Marcia/ProTasks/turmas"
+		"/C/Users/Marcia/ProTasks/contas",
+		"/C/Users/Marcia/ProTasks/ProTasks"
 	],
 	"file_history":
 	[
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/urls.py",
+		"/C/Users/Marcia/ProTasks/contas/urls.py",
+		"/C/Users/Marcia/ProTasks/contas/forms.py",
+		"/C/Users/Marcia/ProTasks/contas/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/base.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/contas/registrar.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/contas/alterar_senha.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/contas/alterar_cadastro.html",
+		"/D/SmartAdmin/DEVELOPER/BS3/HTML/full/index.html",
+		"/C/Users/Marcia/ProTasks/turmas/views.py",
+		"/C/Users/Marcia/ProTasks/atividades/views.py",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/contas/login.html",
+		"/D/SmartAdmin/DEVELOPER/BS3/HTML/full/general-elements.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/settings.py",
+		"/C/Users/Marcia/ProTasks/turmas/urls.py",
+		"/C/Users/Marcia/AppData/Roaming/Sublime Text 3/Packages/Kite/Kite.sublime-settings",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/index.html",
+		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/detalhe.html",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/join.html",
 		"/C/Users/Marcia/ProTasks/turmas/models.py",
 		"/C/Users/Marcia/ProTasks/turmas/admin.py",
-		"/C/Users/Marcia/ProTasks/atividades/views.py",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/form.html",
 		"/C/Users/Marcia/ProTasks/turmas/forms.py",
 		"/C/Users/Marcia/ProTasks/atividades/forms.py",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/turmas/detalhe.html",
 		"/C/Users/Marcia/ProTasks/atividades/urls.py",
-		"/C/Users/Marcia/ProTasks/turmas/urls.py",
-		"/C/Users/Marcia/ProTasks/turmas/views.py",
 		"/C/Users/Marcia/ProTasks/atividades/models.py",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/form.html",
-		"/C/Users/Marcia/ProTasks/ProTasks/templates/base.html",
-		"/D/SmartAdmin/DEVELOPER/BS3/HTML/full/general-elements.html",
 		"/D/SmartAdmin/DEVELOPER/BS3/Source_UNMINIFIED_JS/notification/SmartNotification.txt",
 		"/C/Users/Marcia/ProTasks/ProTasks/statics/js/plugin/datepicker/datepicker-pt-BR.js",
 		"/C/Users/Marcia/ProTasks/ProTasks/statics/js/libs/datepicker-pt-BR.js",
 		"/C/Users/Marcia/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/forms/templates/django/forms/widgets/multiwidget.html",
 		"/C/Users/Marcia/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/forms/templates/django/forms/widgets/splitdatetime.html",
-		"/C/Users/Marcia/ProTasks/ProTasks/settings.py",
 		"/C/Users/Marcia/AppData/Roaming/Sublime Text 3/Packages/KiteSublime/KiteSublime.sublime-settings",
 		"/C/Users/Marcia/AppData/Roaming/Sublime Text 3/Packages/KiteSublime/Default.sublime-keymap",
 		"/C/Users/Marcia/ProTasks/ProTasks/templates/atividades/comentar.html",
@@ -506,7 +528,7 @@
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -520,6 +542,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"content",
+			"admin",
 			"AlunoEmTurma",
 			"HttpResponseRedirect",
 			"<a href=\"{% url 'turmas:turma' turma.id %}\" class=\"btn btn-primary\"> Editar </a>",
@@ -593,144 +617,36 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "turmas/views.py",
-					"semi_transient": false,
+					"file": "atividades/models.py",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 5348,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								890,
-								890
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
 							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ProTasks/templates/turmas/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9923,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1772,
-								1772
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 839.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "turmas/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 720,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								639,
-								639
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "ProTasks/templates/turmas/detalhe.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10958,
-								10879
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2545.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -813,7 +729,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 202.0,
+	"side_bar_width": 226.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
